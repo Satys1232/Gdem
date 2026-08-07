@@ -1,0 +1,3 @@
+| Reviewed Member | Repository Link | What Was Done Well | Issue Identified | Suggested Improvement |
+|---|---|---|---|---|
+| Deepa Bhavyasri Sonti | <Deepa's GitHub repository URL> | The program uses validation loops, a seven-day `for` loop, score classifications, and first-critical-score logic correctly. | The passed-day condition uses `score >= 50` instead of the required `score >= 60`. Also, lowest-score initialization can display Day 0, and all-absent input can cause an average-score error. | Change the pass threshold to 60, initialize highest/lowest from the first attempted score using `first_attempt_found`, and set `average_score = 0` when no practice is attempted. |
