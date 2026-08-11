@@ -5,27 +5,29 @@ class Queue:
     def is_empty(self):
         return len(self.items) == 0
     
-    def push(self ,item):
+    def enqueue(self ,item):
         self.items.append(item)
 
-    def pop(self):
+    def dequeue(self):
         if self.is_empty():
             return "queue is empty , cannot pop"
         self.items.pop(0)
 
-    def peek(self):
+    def front(self):
         if self.is_empty():
             return "Cannot peek , queue is empty"
         print(self.items[0])
+
+    def rear(self):
+        if self.is_empty():
+            return "Cannot rear no element"
+        print(self.items[-1])
 
     def size(self):
         print(len(self.items))
 
 queue = Queue()
-queue.push(10)
-queue.push(20)
-queue.push(30)
-queue.peek()
-queue.size()
-
-    
+queue.enqueue(10)
+queue.enqueue(20)
+queue.enqueue(30)
+queue.rear()
